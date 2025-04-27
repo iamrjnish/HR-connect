@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Enter Room Code</title>
+  </head>
+  <body>
+    <h2>Enter Room Code</h2>
+    <input type="text" id="codeInput" placeholder="Enter room code" />
+    <button onclick="joinRoom()">Join</button>
+
+    <script>
+      function joinRoom() {
+        const code = document.getElementById("codeInput").value.trim();
+        if (code) {
+          localStorage.setItem("roomCode", code);
+          window.location.href = "chat.html";
+        } else {
+          alert("Please enter a valid code");
+        }
+      }
+    </script>
+  </body>
+</html>

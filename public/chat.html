@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <title>Chat Room</title>
     <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="chat.css">
+
     <!-- Important -->
   </head>
   <body>
@@ -19,7 +21,7 @@
       "
     ></div>
 
-    <input type="text" id="messageInput" placeholder="Type your message" />
+    <input type="text" id="messageInput"  class="msg" placeholder="Type your message" />
     <button onclick="sendMessage()">Send</button>
 
     <script>

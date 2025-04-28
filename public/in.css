@@ -1,0 +1,77 @@
+/* Global reset */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body and layout */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #00b894, #0984e3); color: #333;
+    flex-direction: column;
+}
+
+/* Heading style */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: "Baloo Bhai 2",
+        sans-serif;;
+
+}
+
+/* Input field style */
+#codeInput {
+    padding: 12px;
+    font-size: 1rem;
+    width: 250px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Focus effect for input */
+#codeInput:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button style */
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    #codeInput {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}

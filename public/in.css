@@ -65,6 +65,9 @@ body {
   background-color: #053a66;
   transform: scale(1.05);
 }
+footer {
+  margin-top: 10rem;
+}
 
 /* -------- Media Queries -------- */
 

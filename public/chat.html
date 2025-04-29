@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Chat Room</title>
     <script src="/socket.io/socket.io.js"></script>
-    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="chat.css" />
 
     <!-- Important -->
   </head>
@@ -14,15 +14,21 @@
     <div
       id="messages"
       style="
-        height: 300px;
-        overflow-y: scroll;
+        /* height: 300px; */
+        /* overflow-y: scroll; */
         background: #eee;
         margin-bottom: 10px;
       "
     ></div>
-
-    <input type="text" id="messageInput"  class="msg" placeholder="Type your message" />
-    <button onclick="sendMessage()">Send</button>
+    <div class="what_like">
+      <input
+        type="text"
+        id="messageInput"
+        class="msg"
+        placeholder="Type your message"
+      />
+      <button onclick="sendMessage()">Send</button>
+    </div>
 
     <script>
       const socket = io();

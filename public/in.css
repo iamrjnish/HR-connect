@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
@@ -13,12 +13,17 @@ body {
   background: linear-gradient(180deg, #00b894, #0984e3);
   color: #333;
   flex-direction: column;
+  padding: 1rem;
+  text-align: center;
 }
+
 #heading1 {
   font-family: "Righteous", sans-serif;
   font-size: 3rem;
   color: #074276;
+  margin-bottom: 2rem;
 }
+
 #codeInput {
   padding: 1.2rem;
   font-size: 1rem;
@@ -26,38 +31,82 @@ body {
   border: 2px solid #211996;
   border-radius: 1rem;
   margin: 0.5rem 1rem;
+  transition: all 0.3s ease;
 }
+
 #codeInput:focus {
-  padding: 1.2rem;
-  font-size: 1rem;
-  width: 23rem;
   background-color: rgb(223, 224, 226);
-  border: 2px solid #211996;
   box-shadow: 0px 0px 12px #565af1;
-  border-radius: 1rem;
   outline: none;
-  margin: 0.5rem 1rem;
 }
+
 #btn1 {
-  padding: 0.6rem 2em;
+  padding: 0.8rem 2.5rem;
   color: #ffffff;
   font-size: 1rem;
   background-color: #074276;
   border: 2px solid #211996;
   border-radius: 0.7rem;
   margin: 2rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-@media (width: 320px) {
+#btn1:hover {
+  background-color: #053a66;
+  transform: scale(1.05);
+}
+
+/* -------- Media Queries -------- */
+
+/* For devices upto 320px width */
+@media (max-width: 320px) {
   #heading1 {
-    font-family: "Righteous", sans-serif;
-    font-size: 92px;
-    color: #074276;
+    font-size: 5rem;
   }
   #codeInput {
-  }
-  #codeInput:focus {
+    width: 90%;
+    font-size: 0.8rem;
+    padding: 0.9rem;
   }
   #btn1 {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* For devices between 321px and 480px width */
+@media (min-width: 321px) and (max-width: 480px) {
+  #heading1 {
+    font-size: 2.2rem;
+  }
+  #codeInput {
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+  #btn1 {
+    padding: 0.6rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* For devices between 481px and 999px width */
+@media (min-width: 481px) and (max-width: 999px) {
+  #heading1 {
+    font-size: 5.6rem;
+  }
+  #codeInput {
+    width: 51rem;
+    font-size: 3rem;
+    padding: 3.2rem;
+  }
+  #btn1 {
+    padding: 1.7rem 4.2rem;
+    font-size: 3rem;
+  }
+  #btn1:hover {
+    background-color: #053a66;
+    transform: scale(1.05);
   }
 }

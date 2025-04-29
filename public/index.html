@@ -2,28 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Enter Room Code</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Righteous&display=swap"
-      rel="stylesheet"
-    />
+    <title>Enter Room</title>
     <link rel="stylesheet" href="in.css" />
   </head>
   <body>
-    <h2 id="heading1">Enter Room Code</h2>
+    <h2 id="heading1">Join Chat Room</h2>
+    <input type="text" id="usernameInput" placeholder="Enter username" />
     <input type="text" id="codeInput" placeholder="Enter room code" />
     <button id="btn1" onclick="joinRoom()">Join</button>
 
     <script>
       function joinRoom() {
+        const username = document.getElementById("usernameInput").value.trim();
         const code = document.getElementById("codeInput").value.trim();
-        if (code) {
+        if (username && code) {
+          localStorage.setItem("username", username);
           localStorage.setItem("roomCode", code);
           window.location.href = "chat.html";
         } else {
-          alert("Please enter a valid code");
+          alert("Please enter both username and room code");
         }
       }
     </script>

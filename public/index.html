@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <title>Enter Room Code</title>
-    <link rel="stylesheet" href="in.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="in.css" />
   </head>
   <body>
-    <h2>Enter Room Code</h2>
+    <h2 id="heading1">Enter Room Code</h2>
     <input type="text" id="codeInput" placeholder="Enter room code" />
-    <button onclick="joinRoom()">Join</button>
+    <button id="btn1" onclick="joinRoom()">Join</button>
 
     <script>
       function joinRoom() {
